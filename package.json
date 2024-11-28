@@ -1,0 +1,53 @@
+{
+  "name": "spa-react-template",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "private": true,
+  "main": "src/server/index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server/index.js",
+    "build": "npx webpack",
+    "building": "npx webpack -w",
+    "doDeploy": "gcloud run deploy",
+    "prepDeploy": "copy public\\js\\main.js src\\server",
+    "prepDeployMac": "",
+    "deploy": "npm run build && npm run prepDeploy && npm run doDeploy",
+    "deployMac": "npm run build && npm run prepDeployMac && npm run doDeploy"
+  },
+  "keywords": [],
+  "author": "Alexander Erwin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "styled-components": "^5.3.6",
+    "body-parser": "^1.19.0",
+    "jsdom": "^20.0.1",
+    "md5": "^2.2.1",
+    "morgan": "^1.9.1",
+    "node-fetch": "^3.0.0",
+    "prop-types": "^15.6.2",
+    "pug": "^3.0.0",
+    "serve-favicon": "^2.5.0",
+    "underscore": "^1.13.1",
+    "webpack": "^5.57.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/register": "^7.8.6",
+    "@babel/runtime": "^7.11.2",
+    "babel-loader": "^9.1.0",
+    "jsdom-global": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3",
+    "webpack-cli": "^4.8.0"
+  }
+}
